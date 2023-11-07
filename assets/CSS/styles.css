@@ -99,13 +99,12 @@ html{
     top: 100%;
     left: 0;
     position: absolute;
-    background-color: #fff;
+    background-color:#333;
     box-shadow: 0 0 10px rgba(0, 0, 0, o.4);
 }
 
 #nav .subnav a{
-    
-    color: #000;
+    color: #fff;
     padding: 0 12px;
     line-height: 36px;
 }
@@ -135,18 +134,32 @@ html{
 #nav .nav-dow{
     font-size: 12px;
 }
+#header .menu-buton{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+#header .menu-buton,
 #header .search-button{
     float: right;
     line-height: 46px;
     padding: 0 21px;
 }
-#header .search-button:hover{
+
+#header .search-button:hover {
     cursor: pointer;
     background-color: #f44336!important;
 }
+#header .menu-icon,
 #header .search-icon{
 font-size: 20px;
 color: #fff;
+}
+#header .menu-buton:hover .menu-icon{
+    color: #333;
+}
+#header .menu-buton:hover{
+    background-color: #ccc;
 }
 #slider .test-content{
     color: #fff;
@@ -158,6 +171,7 @@ color: #fff;
 #slider .test-headcontent{
     font-weight: 500;
     font-size: 24px;
+    
 }
 #slider .seconcontent{
     margin-top: 15px;

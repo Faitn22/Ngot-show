@@ -6,6 +6,7 @@
     <title>Ngọt show</title>
     <link rel="icon" type="image/x-icon" href="/assets/Img/favicon.jpg">
     <link rel="stylesheet" href="./assets/CSS/styles.css">
+    <link rel="stylesheet" href="./assets/CSS/responsive.css">
     <link rel="stylesheet" href="./assets/fonts/themify-icons/themify-icons.css">
 </head>
 <body>
@@ -17,7 +18,7 @@
                 <li><a href="#tour">Tour</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <li>
-                    <a href="">More
+                    <a href="#">More
                         <i class="nav-dow ti-angle-down"></i>
                     </a>
                     <ul class="subnav">
@@ -29,6 +30,9 @@
             </ul>
             <div class="search-button">
                 <i class="search-icon ti-search"></i>
+            </div>
+            <div id="js-menu" class="menu-buton">
+                <i class="menu-icon ti-menu"></i>
             </div>
         </div>
         <div id="slider">
@@ -48,19 +52,19 @@
                     Một sân khấu với khán giả theo dõi mình là vui rồi. Không quan trọng phải đông, phải có âm thanh, ánh sáng hoành tráng thì mới thăng hoa, chúng tôi luôn tin chỉ cần làm nhạc chất lượng, mọi thức khác không cần lo.
                 </p>
                 <div class="row Member-list">
-                    <div class="col col-four test-content">
-                        <p class="member-name">Vũ Đinh Trọng Thắng</p>
+                    <div class="col col-four test-content member-item">
+                    <p class="member-name">Vũ Đinh Trọng Thắng</p>
                         <img src="/assets/Img/sliders/VDTT.jpg" alt="name" class="member-img">
                     </div>
-                    <div class="col col-four test-content">
+                    <div class="col col-four test-content member-item">
                         <p class="member-name">Nguyễn Hùng Nam Anh</p>
                         <img src="/assets/Img/sliders/NHNA.jpg" alt="name" class="member-img">
                     </div>           
-                    <div class="col col-four test-content">
+                    <div class="col col-four test-content member-item">
                         <p class="member-name">Trần Bình Tuấn</p>
                         <img src="/assets/Img/sliders/TBT.jpg" alt="name" class="member-img">
                     </div>
-                    <div class="col col-four test-content">
+                    <div class="col col-four test-content member-item">
                         <p class="member-name">Phan Việt Hoàng</p>
                         <img src="/assets/Img/sliders/PVH.jpg" alt="name" class="member-img">
                     </div>
@@ -190,6 +194,31 @@
         const modal = document.querySelector('.js-modal')
         const modalClose = document.querySelector('.js-modalclose')
         const modalContainer = document.querySelector('.js-modal-container')
+        var header = document.getElementById('header')
+        var mobileMenu = document.getElementById('js-menu')
+        var headerHeight = header.clientHeight
+        var menuItems = document.querySelectorAll('#nav li a[href*="#"]')
+        mobileMenu.onclick = function(){
+            var isClose = header.clientHeight === headerHeight;
+            if (isClose){
+                header.style.height = 'auto'
+            }
+            else{
+                header.style.height = null
+            }
+        }
+        for (var i = 0; i < menuItems.length; i++){
+            var menuItem = menuItems[i]
+            menuItem.onclick = function(event){
+                var isParentMenu = this.nextElementSibling && menuItem.nextElementSibling.classList.contains('subnav')
+                if (isParentMenu){
+                    event.preventDefailt();
+                }
+                else{
+                    header.style.height = null
+                }
+            }
+        }
         function showModal(){
             modal.classList.add('open')
         }
