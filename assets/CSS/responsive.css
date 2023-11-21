@@ -1,5 +1,7 @@
+
 /* mobile */
-@media (max-width: 740px){
+@media (max-width: 46.1875em){
+    
     #header {
         overflow: hidden;
     }
@@ -29,8 +31,50 @@
         margin-top: 30px;
         width: 50%;
     }
+    .contact-info {
+        font-size: 14px;
+    }
+    #content .member-img {
+        margin-top: 19px;
+    }
+    .s-col-full,
+    .s-full-width{
+        width: 100% !important;
+    }
+    .s-mt-8{
+        margin-top: 8px !important;
+    }
+    .contact-form{
+        margin-top: 16px;
+    }
+    .contact-info{
+        line-height: 2;
+    }
+    #footer .socials-list{
+        font-size: 42px;
+    }
+    
 }
-@media (min-width: 1024px){
+@media (max-width: 63.9375em){
+    .Btn{
+        padding: 15px 16px;
+    }
+    #footer .socials-list{
+        font-size: 40px;
+    }#footer .socials-list a{
+        padding: 0 8px;
+    }
+    #nav .subnav a{
+        padding: 5px 12px;
+    }
+    .contact-info{
+        line-height: 2;
+    }
+    .contact-form {
+        font-size: 32px;
+    }
+}
+@media (min-width: 46.25em){
     #header .menu-buton{
         display: none;
     }

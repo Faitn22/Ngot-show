@@ -127,7 +127,7 @@ html{
 #slider{
     margin-top: 46px;
     padding-top: 50%;
-    background: url('/assets/Img/sliders/Slider1.webp') top center / cover no-repeat;
+    background: url('../Img/sliders/Slider1.webp') top center / cover no-repeat;
     /* bg image, bg posistion / bg size bg repeat  */
     position: relative;
 }
@@ -135,7 +135,7 @@ html{
     font-size: 12px;
 }
 #header .menu-buton{
-    position: absolute;
+    /* position: absolute; */
     top: 0;
     right: 0;
 }
@@ -167,6 +167,7 @@ color: #fff;
     bottom: 47px;
     width: 100%;
     text-align: center;
+    text-shadow: 0 0 1px #000;
 }
 #slider .test-headcontent{
     font-weight: 500;
@@ -249,7 +250,7 @@ color: #fff;
     margin-top: -1px;
 }
 .places-list{
-    margin-top: 32px;
+    margin-top: 16px;
 }
 
 .places-img{
